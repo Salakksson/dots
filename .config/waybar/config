@@ -1,0 +1,122 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"margin-left": 0,
+	"margin-right": 0,
+	"margin-top": 0,
+	"margin-bottom": 0,
+	"spacing": 0,
+
+	"modules-left": ["clock", "custom/separator", "keyboard-state", "custom/separator", "custom/cava"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["cpu", "custom/separator", "temperature", "custom/separator", "network", "custom/separator", "pulseaudio", "custom/separator", "custom/power"],
+
+	"custom/separator": {
+		"format": "|", 
+	},
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"active-only": false,
+		"all-outputs": false,
+		"persistent-workspaces": 
+		 {
+			 "1": [],
+			 "2": [],
+			 "3": [],
+			 "4": [],
+			 "5": [],
+			 "6": [],
+			 "7": [],
+			 "8": [],
+			 "9": [],
+			 "10": [],
+		 }
+	},
+	"clock": 
+	{
+		"interval": 60,
+		"format": "  {:%a %b %d  %H:%M}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+	"custom/cava": 
+	{
+		"format": "{}",
+		"exec": "$HOME/dotfiles/cava-waybar.sh",
+		"return-type": "string",
+		"on-click": "rhythmbox-client --play-pause",
+		"on-click-right": "hyprctl dispatch workspace 10",
+		"on-scroll-up": "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 3%+", 
+		"on-scroll-down": "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 3%-" 
+	},
+	"custom/name":
+	{
+		"format": "{}",
+		"exec": "$HOME/dotfiles/name.sh",
+		"return-type": "string",
+	},
+	"custom/capslock":
+	{
+		"format": "caps lock {}",
+		"exec": "$HOME/dotfiles/caps_lock.sh",
+		"return-type": "string",
+	},
+	"keyboard-state": {
+		"numlock": false,
+		"capslock": true,
+		// "device-path": "/dev/input/event9",
+		"format": "{icon}",
+		"format-icons": {
+			"locked": "CAPSLOCK",
+			"unlocked": "capslock"
+		}
+	},
+	"cpu": 
+	{
+		"interval": 10,
+		"format": "Locked in: {usage}%",
+		"tooltip": false,
+		"on-click": "alacritty -e htop"
+	},
+	"temperature": 
+	{
+		"interval": 10,
+		"critical-threshold": 80,
+		"format": "Temperature in UK: {temperatureC}°C",
+		"format-icons": ["", "", ""]
+	},
+	"network": 
+	{
+		"interval": 30,
+		"format-wifi": "Connection: wi-fi",
+		"format-ethernet": "Connection: rj-45",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+		"format-disconnected": "⚠",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	},
+	"pulseaudio": 
+	{
+		"format": "Balance: ₹{volume}", //{format_source}",
+		"format-bluetooth": "Balance: ₽{volume},000", //{format_source}",
+		"format-icons": 
+		{
+			"headphone": "󰋋",
+			"hands-free": "󱡒",
+			"headset": "󰋎",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol"
+	},
+	"custom/power": 
+	{
+		"format": "{icon}",
+		"format-icons": "",// 󰣇
+		"exec-on-event": "true",
+		"on-click": "wlogout",
+	}
+
+}

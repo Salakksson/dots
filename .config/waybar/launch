@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+killall -q waybar
+
+killall cava
+
+# sh ~/dotfiles/cava-server.sh &
+
+waybar &
+disown
