@@ -1,5 +1,9 @@
 .git
 .gitignore
+.gitmodules
+
+LICENCE
+README.md
 
 wallpapers
 scripts
