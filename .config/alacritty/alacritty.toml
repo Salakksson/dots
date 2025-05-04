@@ -50,6 +50,8 @@ size = 20.0
 [font.normal]
 family = "victor mono nerd font"
 style = "semibold"
+
+
 # family = "sauce code pro mono nerd font"
 
 [font.bold]
