@@ -1,0 +1,23 @@
+sort=-time
+layer=overlay
+anchor=top-right
+
+default-timeout=0
+ignore-timeout=0
+
+font=Victor Mono Nerd Font
+width=300
+height=220
+max-icon-size=64
+icons=1
+
+format=<b>%a ⏵</b> %s\n%b
+
+border-radius=5
+border-size=1
+margin=5
+padding=5,5,5
+
+background-color=#1a1b26
+text-color=#ffffff
+border-color=#2a2b37
