@@ -1,5 +1,5 @@
-xhost si:localuser:root > /dev/null
-clear
+# xhost si:localuser:root > /dev/null
+# clear
 autoload -Uz promptinit vcs_info
 
 precmd() { vcs_info }
@@ -34,3 +34,9 @@ eval "$(zoxide init --cmd cd zsh)"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# for fuckass apps that keep trashing my home
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+
