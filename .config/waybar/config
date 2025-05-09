@@ -96,8 +96,8 @@
 	},
 	"pulseaudio":
 	{
-		"format": "Balance: ₹{volume}", //{format_source}",
-		"format-bluetooth": "Balance: ₽{volume},000", //{format_source}",
+		"format": "Balance: ₹{volume}",
+		"format-bluetooth": "Balance: ₽{volume},000",
 		"format-icons":
 		{
 			"headphone": "󰋋",
