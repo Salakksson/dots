@@ -39,4 +39,4 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 # for fuckass apps that keep trashing my home
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
