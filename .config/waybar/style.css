@@ -10,7 +10,7 @@
 	min-height: 0;
 	font-family: "Victor Mono Nerd Font ", "SauceCodePro Nerd Font Propo", "JetBrainsMono Nerd Font", "Hack Nerd Font", FontAwesome, Roboto,
 		Helvetica, Arial, sans-serif;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 900;
 	background-color: #1a1b26;
 	/* color: @text; */
@@ -91,6 +91,7 @@ button:hover {
 #cpu,
 #temperature,
 #network,
+#battery
 #pulseaudio,
 #custom-power {
 	padding-right: 4px;
@@ -101,29 +102,29 @@ button:hover {
 
 #custom-separator {
 	color: @text;
-	font-size: 24px;
+	font-size: 17px;
 	padding-right: 4px;
 	padding-left: 4px;
 }
 
 #clock {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 #custom-name {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 #custom-capslock {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 #keyboard-state {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 #custom-cava {
@@ -133,22 +134,27 @@ button:hover {
 
 #cpu {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 #temperature {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 #network {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
+}
+
+#battery {
+	color: @text;
+	font-size: 15px;
 }
 
 #pulseaudio {
 	color: @text;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 #custom-power {

@@ -8,9 +8,9 @@
 	"margin-bottom": 0,
 	"spacing": 0,
 
-	"modules-left": ["clock", "custom/separator", "keyboard-state", "custom/separator", "custom/cava"],
+	"modules-left": ["clock"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["cpu", "custom/separator", "temperature", "custom/separator", "network", "custom/separator", "pulseaudio", "custom/separator", "custom/power"],
+	"modules-right": ["cpu", "custom/separator", "network", "custom/separator", "battery", "custom/separator", "pulseaudio", "custom/separator", "custom/power"],
 
 	"custom/separator": {
 		"format": "|", 
@@ -75,7 +75,7 @@
 	"cpu": 
 	{
 		"interval": 10,
-		"format": "Locked in: {usage}%",
+		"format": "CPU {usage}%",
 		"tooltip": false,
 		"on-click": "alacritty -e htop"
 	},
@@ -83,7 +83,7 @@
 	{
 		"interval": 10,
 		"critical-threshold": 80,
-		"format": "Temperature in UK: {temperatureC}°C",
+		"format": "{temperatureC}°C",
 		"format-icons": ["", "", ""]
 	},
 	"network": 
@@ -97,8 +97,8 @@
 	},
 	"pulseaudio": 
 	{
-		"format": "Balance: ₹{volume}", //{format_source}",
-		"format-bluetooth": "Balance: ₽{volume},000", //{format_source}",
+		"format": "{volume}%",
+		"format-bluetooth": "{volume}%", 
 		"format-icons": 
 		{
 			"headphone": "󰋋",
