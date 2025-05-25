@@ -22,7 +22,7 @@ alias emcs='emacsclient -c -nw'
 
 # cant use emacsclient because might be ran in sudo
 export EDITOR="emacs -nw"
-export VISUAL="emacs"
+export VISUAL="emacs -nw"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt nocaseglob
