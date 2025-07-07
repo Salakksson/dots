@@ -42,3 +42,8 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+
+# dotnet tools
+export PATH="$PATH:/home/been/.local/share/dotnet/.dotnet/tools"
+
+ulimit -n 16384 # temporary fix to prevent kitty crashing ):
