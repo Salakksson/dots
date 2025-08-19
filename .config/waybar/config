@@ -8,7 +8,7 @@
 	"margin-bottom": 0,
 	"spacing": 0,
 
-	"modules-left": ["clock", "custom/separator", "keyboard-state"],
+	"modules-left": ["clock", "custom/separator", "custom/cava"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["cpu", "custom/separator", "temperature", "custom/separator", "network", "custom/separator", "pulseaudio", "custom/separator", "custom/power"],
 

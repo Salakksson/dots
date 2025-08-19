@@ -128,7 +128,8 @@ button:hover {
 
 #custom-cava {
 	color: @text;
-	font-family: "Untitled1";
+	/* font-family: "Untitled1"; */
+	font-size: 18px;
 }
 
 #cpu {
