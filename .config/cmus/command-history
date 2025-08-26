@@ -1,0 +1,44 @@
+add /h/music/songs
+clear
+help
+remove all
+delete all
+add /h/music/smart
+filter F
+live-filter 
+live-filter Lg
+add /h/media/music/smart
+remove
+delete
+clear -p
+w
+q
+set
+q:qq
+pl-rename all
+pl-rename new all
+b.i.g
+pl-delete all
+Q
+pl-create new
+pl-delete Default
+pl-delete
+pl-create all
+shuffle
+bind common Q lqueue
+bind common q lqueue
+add /h/media/music/all/
+colorscheme custom
+colorscheme night
+colorsheme night
+colorscheme ergh
+colorsheme 234234
+colorscheme
+add /h/media/music/all
+add /h/media/songs/all
+colorscheme tokyo-night
+colorsheme
+h
+shuffle on
+random
+add
