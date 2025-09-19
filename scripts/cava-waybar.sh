@@ -1,3 +1,5 @@
+#!/bin/sh
+
 pipe="/tmp/cava.fifo"
 
 if [ -p $pipe ]; then
@@ -25,8 +27,8 @@ ascii_max_range = 7
 
 cava -p $config_file &
 
-bar="▁▂▃▄▅▆▇█"		# For default fonts
-# bar="abdcefgh"		# For my custom font
+bar="▁▂▃▄▅▆▇█"    # For default fonts
+# bar="abdcefgh"  # For my custom font
 
 pipe="/tmp/cava.fifo"
 dict="s/;//g;"

@@ -1,5 +1,3 @@
-# xhost si:localuser:root > /dev/null
-# clear
 autoload -Uz promptinit vcs_info
 
 precmd() { vcs_info }
@@ -30,8 +28,8 @@ function run() {
 }
 
 # cant use emacsclient because might be ran in sudo
-export EDITOR="emacs -nw"
-export VISUAL="emacs -nw"
+EDITOR="emacs -nw"
+VISUAL="emacs -nw"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt nocaseglob
@@ -42,17 +40,19 @@ setopt auto_cd
 eval "$(atuin init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_STATE_HOME="$HOME/.local/state"
+PATH="$HOME/dots/scripts $PATH"
 
-export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
-export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_DATA_HOME="$HOME/.local/share"
+XDG_CACHE_HOME="$HOME/.cache"
+XDG_STATE_HOME="$HOME/.local/state"
+
+GNUPGHOME="$XDG_DATA_HOME"/gnupg
+CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 
 # dotnet tools
-export PATH="$PATH:/home/been/.local/share/dotnet/.dotnet/tools"
+PATH="$PATH:/home/been/.local/share/dotnet/.dotnet/tools"
 
 ulimit -n 16384 # temporary fix to prevent kitty crashing ):
