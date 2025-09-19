@@ -40,7 +40,11 @@ setopt auto_cd
 eval "$(atuin init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-PATH="$HOME/dots/scripts $PATH"
+PATH="$PATH:$HOME/dots/scripts"
+
+for f in $HOME/dots/scripts/*.sh; do
+  ln -sf "$f" "${f%.sh}"
+done
 
 XDG_CONFIG_HOME="$HOME/.config"
 XDG_DATA_HOME="$HOME/.local/share"
