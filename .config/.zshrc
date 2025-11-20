@@ -5,7 +5,26 @@ zstyle ':vcs_info:git:*' formats '%b '
 
 setopt PROMPT_SUBST
 # PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f» '
-PROMPT='%F{cyan}%~%f %F{red}${vcs_info_msg_0_}%f» '
+# PROMPT='%F{cyan}%~%f %F{red}${vcs_info_msg_0_}%f» '
+
+winpwd() {
+	if [ "$PWD" = "/" ]
+	then
+		echo "C:\Windows\system32"
+		return
+	fi
+
+	winpwd="$PWD"
+	_winhome="/users/$USER"
+	winpwd=$(echo "$winpwd" | sed "s#${HOME}#${_winhome}#g")
+	winpwd=$(echo "$winpwd" | sed 's#/#\\#g')
+	winpwd="C:$winpwd"
+	print -r -- "$winpwd"
+}
+
+setopt prompt_subst
+
+export PROMPT='$(winpwd)> '
 
 HISTSIZE=500
 SAVEHIST=500
@@ -43,7 +62,8 @@ eval "$(zoxide init --cmd cd zsh)"
 PATH="$PATH:$HOME/dots/scripts"
 
 for f in $HOME/dots/scripts/*.sh; do
-  ln -sf "$f" "${f%.sh}"
+	ln -sf "$f" "${f%.sh}"
+	chmod +x $f
 done
 
 XDG_CONFIG_HOME="$HOME/.config"

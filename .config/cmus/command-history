@@ -1,5 +1,9 @@
-add /h/music/songs
+add /h/media/music/smart
 clear
+pl-create classical
+remove
+empty
+add /h/music/songs
 help
 remove all
 delete all
@@ -7,8 +11,6 @@ add /h/music/smart
 filter F
 live-filter 
 live-filter Lg
-add /h/media/music/smart
-remove
 delete
 clear -p
 w
